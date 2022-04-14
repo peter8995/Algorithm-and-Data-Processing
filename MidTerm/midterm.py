@@ -23,7 +23,7 @@ samples = {'Oversampler' : dfOversampler, 'Undersampler' : dfUndersampler}
 
 for sample in samples:
     array = samples[sample].values
-    x = array[:,1:5]
+    x = array[:,1:4]
     y = array[:,5]
 
     seed = 7
