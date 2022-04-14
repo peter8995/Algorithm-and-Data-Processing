@@ -17,9 +17,10 @@ knr = KNeighborsRegressor()
 dt = DecisionTreeRegressor()
 svr = SVR()
 
-ests = {'LinearRegression':lr,'Ridge': rr,'Lasso': las, 'ElasticNet': el, 'KNeighborsRegressor': knr, 'DecisionTreeRegressor': dt, 'SVR': svr}
-
+ests = {'LinearRegression':lr,'Ridge': rr,'Lasso': las, 'ElasticNet': el, 'KNeighborsRegressor': knr\
+    , 'DecisionTreeRegressor': dt, 'SVR': svr}
 samples = {'Oversampler' : dfOversampler, 'Undersampler' : dfUndersampler}
+
 for sample in samples:
     array = samples[sample].values
     x = array[:,1:5]
