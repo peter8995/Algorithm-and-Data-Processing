@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.svm import SVR
 
-names = ['temp', 'dpTemp' ,'RH', 'WDIR', 'VIZ']
+names = ['temp', 'dpTemp' ,'RH', 'WDIR', 'VIZ', 'Label']
 dfOversampler = pd.read_csv('./oversampler.csv', names=names)
 dfUndersampler = pd.read_csv('./undersampler.csv', names=names)
 
@@ -25,8 +25,8 @@ ests = {'LinearRegression':lr,'Ridge': rr,'Lasso': las, 'ElasticNet': el, 'KNeig
 samples = {'Oversampler' : dfOversampler, 'Undersampler' : dfUndersampler}
 for sample in samples:
     array = samples[sample].values
-    x = array[:,1:4]
-    y = array[:,4]
+    x = array[:,1:5]
+    y = array[:,5]
 
     seed = 7
     kfold = model_selection.KFold(n_splits=10, random_state=seed, shuffle=True)
