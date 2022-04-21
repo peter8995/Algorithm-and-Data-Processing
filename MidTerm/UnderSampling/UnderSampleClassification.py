@@ -43,4 +43,7 @@ model = search.export_model()
 # summarize the loaded model
 model.summary()
 # save the best performing model to file
-model.save('model_UnderSampling', save_format='tf')
+try:
+    model.save("modelUnderSampling", save_format="tf")
+except Exception:
+    model.save("modelUnderSampling.h5")

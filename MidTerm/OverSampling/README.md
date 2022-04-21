@@ -1,9 +1,7 @@
 ```
-147/147 [==============================] - 1s 5ms/step - loss: 0.2508 - accuracy: 0.8922
-consider avoiding using them.
-Accuracy: 0.920
+Best val_accuracy So Far: 0.9688196182250977
 1/1 [==============================] - 0s 11ms/step
-Predicted: 0.000
+Predicted: 1.000
 Model: "model"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #
@@ -24,13 +22,18 @@ _________________________________________________________________
 
  re_lu_1 (ReLU)              (None, 32)                0
 
- dense_2 (Dense)             (None, 1)                 33
+ dense_2 (Dense)             (None, 32)                1056
+
+ re_lu_2 (ReLU)              (None, 32)                0
+
+ dense_3 (Dense)             (None, 1)                 33
 
  classification_head_1 (Acti  (None, 1)                0
  vation)
 
 =================================================================
-Total params: 1,258
-Trainable params: 1,249
+Total params: 2,314
+Trainable params: 2,305
 Non-trainable params: 9
+_________________________________________________________________
 ```
