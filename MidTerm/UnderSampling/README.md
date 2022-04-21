@@ -1,8 +1,7 @@
 ```
-7/7 [==============================] - 1s 8ms/step - loss: 0.7288 - accuracy: 0.4348
-Accuracy: 0.544
-1/1 [==============================] - 0s 14ms/step
-Predicted: 0.000
+Best val_accuracy So Far: 1.0
+1/1 [==============================] - 0s 16ms/step
+Predicted: 1.000
 Model: "model"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #
@@ -17,9 +16,15 @@ _________________________________________________________________
 
  dense (Dense)               (None, 32)                160
 
+ batch_normalization (BatchN  (None, 32)               128
+ ormalization)
+
  re_lu (ReLU)                (None, 32)                0
 
  dense_1 (Dense)             (None, 32)                1056
+
+ batch_normalization_1 (Batc  (None, 32)               128
+ hNormalization)
 
  re_lu_1 (ReLU)              (None, 32)                0
 
@@ -29,7 +34,8 @@ _________________________________________________________________
  vation)
 
 =================================================================
-Total params: 1,258
-Trainable params: 1,249
-Non-trainable params: 9
+Total params: 1,514
+Trainable params: 1,377
+Non-trainable params: 137
+_________________________________________________________________
 ```
