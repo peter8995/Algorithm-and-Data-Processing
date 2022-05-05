@@ -31,9 +31,10 @@ search = StructuredDataClassifier(max_trials=100, overwrite=True)
 earlystopping = callbacks.EarlyStopping(monitor ="val_loss", 
                                         mode ="min", patience = 5, 
                                         restore_best_weights = True)
+tensorboard_callback = [callbacks.TensorBoard(log_dir='.\\logs')]
 
 # perform the search
-search.fit(x=X_train, y=y_train, callbacks=[earlystopping] ,verbose=2)
+search.fit(x=X_train, y=y_train, callbacks=[earlystopping, tensorboard_callback] ,verbose=2)
 
 # evaluate the model
 loss, acc = search.evaluate(X_test, y_test, verbose=0)
