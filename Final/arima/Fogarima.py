@@ -20,6 +20,10 @@ def adf_test(dataset):
      print("5. Critical Values :")
      for key, val in dftest[4].items():
          print("\t",key, ": ", val)
+"""
+If p< 0.05 ; Data is stationary
+if p> 0.05; Data is not stationary
+"""
 
 data = pd.read_csv('../Fog.csv')
 data.tail()

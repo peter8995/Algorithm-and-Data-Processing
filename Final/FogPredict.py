@@ -65,7 +65,6 @@ lookback = 23
 Fog = ak.TimeseriesForecaster(
     lookback=lookback,
     predict_until = predict_until,
-    max_trials = 100,
     objective="val_loss",
 )
 
