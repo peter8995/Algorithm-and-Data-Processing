@@ -79,7 +79,7 @@ print(data_y.shape)  # (6549,)
 
 predict_from = 1
 predict_until = 10
-lookback = 3
+lookback = 32
 clf = ak.TimeseriesForecaster(
     lookback=lookback,
     predict_from=predict_from,
